@@ -9,18 +9,19 @@ module.exports = function(plop) {
       },
       {
         type: 'confirm',
-        name: 'connectToRedux',
+        name: 'stateless',
+        message: 'Do you want the component to be stateless?',
+        default: true,
+      },
+      {
+        type: 'confirm',
+        name: 'connected',
         message: 'Do you want the component to be connected to Redux?',
         default: true,
       },
     ],
-    actions: answers => {
+    actions: ({ stateless, connected }) => {
       const actions = [
-        {
-          type: 'add',
-          path: './src/components/{{properCase componentName}}/{{properCase componentName}}.tsx',
-          templateFile: './config/plop/component/component.tsx.plop',
-        },
         {
           type: 'add',
           path: './src/components/{{properCase componentName}}/{{properCase componentName}}.test.tsx',
@@ -28,7 +29,21 @@ module.exports = function(plop) {
         },
       ];
 
-      if (answers.connectToRedux) {
+      if (stateless) {
+        actions.push({
+          type: 'add',
+          path: './src/components/{{properCase componentName}}/{{properCase componentName}}.tsx',
+          templateFile: './config/plop/component/component.stateless.tsx.plop',
+        });
+      } else {
+        actions.push({
+          type: 'add',
+          path: './src/components/{{properCase componentName}}/{{properCase componentName}}.tsx',
+          templateFile: './config/plop/component/component.tsx.plop',
+        });
+      }
+
+      if (connected) {
         actions.push({
           type: 'add',
           path: './src/components/{{properCase componentName}}/index.tsx',
@@ -56,18 +71,19 @@ module.exports = function(plop) {
       },
       {
         type: 'confirm',
-        name: 'connectToRedux',
+        name: 'stateless',
+        message: 'Do you want the container to be stateless?',
+        default: true,
+      },
+      {
+        type: 'confirm',
+        name: 'connected',
         message: 'Do you want the container to be connected to Redux?',
         default: true,
       },
     ],
-    actions: answers => {
+    actions: ({ stateless, connected }) => {
       const actions = [
-        {
-          type: 'add',
-          path: './src/containers/{{properCase containerName}}/{{properCase containerName}}.tsx',
-          templateFile: './config/plop/container/container.tsx.plop',
-        },
         {
           type: 'add',
           path: './src/containers/{{properCase containerName}}/{{properCase containerName}}.test.tsx',
@@ -75,7 +91,21 @@ module.exports = function(plop) {
         },
       ];
 
-      if (answers.connectToRedux) {
+      if (stateless) {
+        actions.push({
+          type: 'add',
+          path: './src/containers/{{properCase containerName}}/{{properCase containerName}}.tsx',
+          templateFile: './config/plop/container/container.stateless.tsx.plop',
+        });
+      } else {
+        actions.push({
+          type: 'add',
+          path: './src/containers/{{properCase containerName}}/{{properCase containerName}}.tsx',
+          templateFile: './config/plop/container/container.tsx.plop',
+        });
+      }
+
+      if (connected) {
         actions.push({
           type: 'add',
           path: './src/containers/{{properCase containerName}}/index.tsx',

@@ -1,0 +1,11 @@
+import React, { ReactNode } from 'react';
+
+interface Props {};
+
+function {{pascalCase containerName}}(props: Props): ReactNode {
+  return (
+    <div className="{{pascalCase containerName}}" />
+  );
+}
+
+export default {{pascalCase containerName}}

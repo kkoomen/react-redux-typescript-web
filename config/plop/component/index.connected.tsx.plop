@@ -1,0 +1,8 @@
+import { connect } from 'react-redux';
+import {{pascalCase componentName}} from './{{pascalCase componentName}}';
+
+function mapStateToProps(state, ownProps) {
+  return {};
+}
+
+export default connect(mapStateToProps)({{pascalCase componentName}});

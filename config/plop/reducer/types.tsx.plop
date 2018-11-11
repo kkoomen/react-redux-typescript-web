@@ -1,0 +1,7 @@
+export interface {{pascalCase reducerName}}State = {
+  isLoading: boolean,
+};
+
+export interface Action = {
+  type: '{{upperCase (snakeCase reducerName)}}_EXAMPLE',
+};

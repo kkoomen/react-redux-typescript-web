@@ -1,0 +1,16 @@
+import React, { Component, ReactNode } from 'react';
+
+interface Props {};
+interface State {};
+
+class {{pascalCase containerName}} extends Component<Props, State> {
+  state: State = {};
+
+  render(): ReactNode {
+    return (
+      <div className="{{pascalCase containerName}}" />
+    );
+  }
+}
+
+export default {{pascalCase containerName}}

@@ -1,0 +1,19 @@
+import { {{upperCase (snakeCase reducerName)}}_EXAMPLE } from './actions';
+import { Action, {{pascalCase reducerName}}State } from './types';
+
+export const initialState: {{pascalCase reducerName}}StateT = {
+  isLoading: false,
+};
+
+export default (state: {{pascalCase reducerName}}State = initialState, action: Action) => {
+  switch (action.type) {
+    case {{upperCase (snakeCase reducerName)}}_EXAMPLE:
+      return {
+        ...state,
+        isLoading: true,
+      };
+
+    default:
+      return state;
+  }
+};

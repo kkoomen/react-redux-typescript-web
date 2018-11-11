@@ -1,3 +1,5 @@
-export function {{pascalCase reducerName}}Example() ({
-  type: {{upperCase (snakeCase reducerName)}}_EXAMPLE,
-});
+export function {{pascalCase reducerName}}Example() (
+  return {
+    type: {{upperCase (snakeCase reducerName)}}_EXAMPLE,
+  };
+);

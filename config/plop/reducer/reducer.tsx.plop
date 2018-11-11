@@ -1,7 +1,7 @@
-import { {{upperCase (snakeCase reducerName)}}_EXAMPLE } from './actions';
+import { {{upperCase (snakeCase reducerName)}}_EXAMPLE } from '../../actions/{{pascalCase reducerName}}';
 import { Action, {{pascalCase reducerName}}State } from './types';
 
-export const initialState: {{pascalCase reducerName}}StateT = {
+export const initialState: {{pascalCase reducerName}}State = {
   isLoading: false,
 };
 

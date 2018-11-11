@@ -1,5 +1,7 @@
 import React, { Component, ReactNode } from 'react';
-import Button from '../Button';
+
+import { DEBUG } from '../../config/constants';
+import Debug from '../Debug';
 
 interface Props {};
 interface State {};
@@ -10,7 +12,7 @@ class App extends Component<Props, State> {
   render(): ReactNode {
     return (
       <div className="App">
-          <Button>Click me</Button>
+          {DEBUG && <Debug />}
       </div>
     );
   }

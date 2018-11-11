@@ -1,0 +1,80 @@
+@import 'assets/variables.scss';
+@import 'assets/mixins.scss';
+
+body {
+  @include font-size($font-size--body);
+  @include font--primary();
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $color--black;
+  line-height: $line-height--body;
+
+  @media #{$normal} {
+    @include font-size($desktop--font-size--body);
+    line-height: $desktop--line-height--body;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+h1 {
+  @include font-size($font-size--h1);
+  @include font--secondary(900);
+  line-height: $line-height--h1;
+  margin-bottom: 2rem;
+
+  @media #{$normal} {
+    @include font-size($desktop--font-size--h1);
+    line-height: $desktop--line-height--h1;
+    margin-bottom: 3rem;
+  }
+}
+
+h2 {
+  @include font-size($font-size--h2);
+  @include font--secondary(900);
+  line-height: $line-height--h2;
+  margin-bottom: 2rem;
+
+  @media #{$normal} {
+    @include font-size($desktop--font-size--h2);
+    line-height: $desktop--line-height--h2;
+  }
+}
+
+h3 {
+  @include font-size($font-size--h3);
+  @include font--secondary(900);
+  line-height: $line-height--h3;
+  margin-bottom: 2rem;
+
+  @media #{$normal} {
+    @include font-size($desktop--font-size--h3);
+    line-height: $desktop--line-height--h3;
+  }
+}
+
+h4 {
+  @include font-size($font-size--h4);
+  @include font--secondary(900);
+  line-height: $line-height--h4;
+  margin-bottom: 2rem;
+
+  @media #{$normal} {
+    @include font-size($desktop--font-size--h4);
+    line-height: $desktop--line-height--h4;
+  }
+}

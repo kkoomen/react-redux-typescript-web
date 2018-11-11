@@ -12,7 +12,7 @@ class App extends Component<Props, State> {
   render(): ReactNode {
     return (
       <div className="App">
-          {DEBUG && <Debug />}
+        {DEBUG && <Debug />}
       </div>
     );
   }

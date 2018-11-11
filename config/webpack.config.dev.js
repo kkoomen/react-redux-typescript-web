@@ -66,7 +66,9 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
       },
     },
   ];
-  if (preProcessor) {
+  if (typeof preProcessor === 'object') {
+    loaders.push(preProcessor);
+  } else if (typeof preProcessor === 'string') {
     loaders.push(require.resolve(preProcessor));
   }
   return loaders;
@@ -297,7 +299,12 @@ module.exports = {
           {
             test: sassRegex,
             exclude: sassModuleRegex,
-            use: getStyleLoaders({ importLoaders: 2 }, 'sass-loader'),
+            use: getStyleLoaders({ importLoaders: 2 }, {
+              loader: 'sass-loader',
+              options: {
+                includePaths: [path.resolve(paths.appSrc, 'styles'), 'node_modules'],
+              },
+            }),
           },
           // Adds support for CSS Modules, but using SASS
           // using the extension .module.scss or .module.sass

@@ -1,14 +1,13 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
-import { initialState } from './reducer';
-import * as Actions from './actions';
+import { initialState } from './';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-describe('Your test', () => {
+describe('Debug actions', () => {
   it('should do something', () => {
-    const store = mockStore({ Debug: initialState });
+    const store = mockStore({ debug: initialState });
   });
 });

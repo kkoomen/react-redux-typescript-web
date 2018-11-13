@@ -1,0 +1,25 @@
+import { ActionType } from  'typesafe-actions';
+import { Reducer } from 'redux';
+import { {{pascalCase reducerName}}State, {{pascalCase reducerName}}ActionTypes } from './types';
+import * as {{pascalCase reducerName}}Actions from './actions';
+
+export const initialState: {{pascalCase reducerName}}State = {
+  isLoading: false,
+};
+
+const {{camelCase reducerName}}Reducer: Reducer<{{pascalCase reducerName}}State, {{pascalCase reducerName}}Action> = (state = initialState, action) => {
+  switch (action.type) {
+    case {{upperCase (snakeCase reducerName)}}_EXAMPLE: {
+      return {
+        ...state,
+        isLoading: true,
+      };
+    }
+
+    default: {
+      return state;
+    }
+  }
+};
+
+export default {{camelCase reducerName}}Reducer;

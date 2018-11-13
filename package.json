@@ -71,6 +71,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "test:update": "yarn test --updateSnapshot",
     "plop": "plop"
   },
   "browserslist": [
@@ -80,13 +81,6 @@
     "not op_mini all"
   ],
   "jest": {
-    "collectCoverage": true,
-    "coverageDirectory": "<rootDir>/coverage",
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/serviceWorker.ts",
-      "!src/**/*.d.ts"
-    ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
       "react-app-polyfill/jsdom"

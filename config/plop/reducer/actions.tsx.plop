@@ -1,5 +1,6 @@
-export function {{pascalCase reducerName}}Example() (
-  return {
-    type: {{upperCase (snakeCase reducerName)}}_EXAMPLE,
-  };
+import { action } from 'typesafe-actions'
+import { {{pascalCase reducerName}}ActionTypes } from './types'
+
+export const {{pascalCase reducerName}}Example = () => action(
+  {{pascalCase reducerName}}ActionTypes.EXAMPLE
 );

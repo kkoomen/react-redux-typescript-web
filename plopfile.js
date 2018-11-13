@@ -146,13 +146,13 @@ module.exports = function(plop) {
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/reducer.tsx',
-          templateFile: './config/plop/reducer/reducer.tsx.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/index.tsx',
+          templateFile: './config/plop/reducer/index.tsx.plop',
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/reducer.test.tsx',
-          templateFile: './config/plop/reducer/reducer.test.tsx.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/index.test.tsx',
+          templateFile: './config/plop/reducer/index.test.tsx.plop',
         },
         {
           type: 'add',

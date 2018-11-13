@@ -1,7 +1,7 @@
 import { ActionType } from  'typesafe-actions';
 import { Reducer } from 'redux';
-import { DebugState, DebugActionTypes } from './types'
-import * as debugActions from './actions';
+import { DebugState, DebugActionTypes } from './types';
+import * as DebugActions from './actions';
 
 export const initialState: DebugState = {
   logs: {
@@ -9,7 +9,7 @@ export const initialState: DebugState = {
   },
 };
 
-export type DebugAction = ActionType<typeof debugActions>;
+export type DebugAction = ActionType<typeof DebugActions>;
 
 const debugReducer: Reducer<DebugState, DebugAction> = (state = initialState, action) => {
   switch (action.type) {

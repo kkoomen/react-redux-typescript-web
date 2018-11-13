@@ -1,11 +1,20 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+{{#if connected}}
+import { ConnectedReduxProps } from '../../reducers';
+{{/if}}
 
 interface Props {};
 
-function {{pascalCase componentName}}(props: Props): ReactNode {
+{{#if connected}}
+type {{pascalCase componentName}}Props = Props & ConnectedReduxProps;
+
+function {{pascalCase componentName}}(props: {{pascalCase componentName}}Props) {
+{{else}}
+function {{pascalCase componentName}}(props: Props) {
+{{/if}}
   return (
     <div className="{{pascalCase componentName}}" />
   );
 }
 
-export default {{pascalCase componentName}}
+export default {{pascalCase componentName}};

@@ -3,5 +3,7 @@
 exports[`App should match its snapshot 1`] = `
 <div
   className="App"
-/>
+>
+  <Connect(Debug) />
+</div>
 `;

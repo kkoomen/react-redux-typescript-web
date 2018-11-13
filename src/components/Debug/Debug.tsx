@@ -1,27 +1,22 @@
-import React, {
-  Component,
-  ReactNode,
-  SyntheticEvent,
-} from "react";
+import React, { Component, SyntheticEvent } from "react";
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import JSONTree from 'react-json-tree';
-import { AppState } from '../../reducers';
+import { AppState, ConnectedReduxProps } from '../../reducers';
 
 import {
   enableActionLogs,
   disableActionLogs,
 } from '../../reducers/Debug/actions';
-
 import './style.scss';
 
 interface Props {
-  dispatch: Function,
   fullState: AppState,
-};
-interface State {};
+}
 
-class Debug extends Component<Props, State> {
+interface State {}
+
+class Debug extends Component<Props & ConnectedReduxProps, State> {
   state = {
     open: false,
   };
@@ -41,7 +36,7 @@ class Debug extends Component<Props, State> {
     }
   }
 
-  render(): ReactNode {
+  render() {
     const classes = classNames('Debug', {
       open: this.state.open,
     });

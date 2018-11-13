@@ -1,16 +1,26 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component } from 'react';
+{{#if connected}}
+import { ConnectedReduxProps } from '../../reducers';
+{{/if}}
 
 interface Props {};
+
 interface State {};
 
-class {{pascalCase componentName}} extends Component<Props, State> {
-  state: State = {};
+{{#if connected}}
+type {{pascalCase componentName}}Props = Props & ConnectedReduxProps;
 
-  render(): ReactNode {
+class {{pascalCase componentName}} extends Component<{{pascalCase componentName}}Props, State> {
+{{else}}
+class {{pascalCase componentName}} extends Component<Props, State> {
+{{/if}}
+  state = {};
+
+  render() {
     return (
       <div className="{{pascalCase componentName}}" />
     );
   }
 }
 
-export default {{pascalCase componentName}}
+export default {{pascalCase componentName}};

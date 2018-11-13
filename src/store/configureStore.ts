@@ -7,7 +7,7 @@ import { __DEBUG__ } from '../config/constants';
 import rootReducer, { AppState } from '../reducers';
 
 // Compose with the devtools extension when in a non-production environment.
-export const composeEnhancers = (
+const composeEnhancers = (
   __DEBUG__
   && window
   && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
@@ -44,7 +44,7 @@ export default function configureStore(
   );
 
   const store = createStore(
-    rootReducer,
+    rootReducer(history),
     initialState,
     composedEnhancers,
   );

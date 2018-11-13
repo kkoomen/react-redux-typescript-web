@@ -1,5 +1,5 @@
 import { combineReducers, Dispatch, Action, AnyAction } from 'redux'
-import { routerReducer, RouterState } from 'react-router-redux';
+import { RouterState } from 'connected-react-router';
 import { persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage';
 
@@ -7,7 +7,6 @@ import debugReducer from './Debug/reducer';
 import { DebugState } from './Debug/types';
 
 export interface AppState {
-  routing: RouterState,
   debug: DebugState,
 };
 
@@ -17,7 +16,6 @@ export interface ConnectedReduxProps<A extends Action = AnyAction> {
 }
 
 const rootReducer = combineReducers<AppState>({
-  routing: routerReducer,
   debug: debugReducer,
 });
 

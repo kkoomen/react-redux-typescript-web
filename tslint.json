@@ -1,0 +1,8 @@
+// TODO: Check out what to extend.
+// TODO: Add custom ruling
+
+{
+  "extends": ["tslint-react", "tslint-eslint-rules", "tslint:recommended"],
+  "defaultSeverity": "warning",
+  "rules": { }
+}

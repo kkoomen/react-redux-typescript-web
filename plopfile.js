@@ -136,8 +136,8 @@ module.exports = function(plop) {
       const actions = [
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/actions.tsx',
-          templateFile: './config/plop/reducer/actions.tsx.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/actions.ts',
+          templateFile: './config/plop/reducer/actions.ts.plop',
         },
         {
           type: 'add',
@@ -146,8 +146,8 @@ module.exports = function(plop) {
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/index.tsx',
-          templateFile: './config/plop/reducer/index.tsx.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/index.ts',
+          templateFile: './config/plop/reducer/index.ts.plop',
         },
         {
           type: 'add',
@@ -156,8 +156,8 @@ module.exports = function(plop) {
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/types.tsx',
-          templateFile: './config/plop/reducer/types.tsx.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/types.ts',
+          templateFile: './config/plop/reducer/types.ts.plop',
         },
       ];
 

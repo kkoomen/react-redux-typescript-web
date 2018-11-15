@@ -16,7 +16,9 @@ interface Props {
 
 interface State {}
 
-class Debug extends Component<Props & ConnectedReduxProps, State> {
+type DebugProps = Props & ConnectedReduxProps;
+
+class Debug extends Component<DebugProps, State> {
   state = {
     open: false,
   };

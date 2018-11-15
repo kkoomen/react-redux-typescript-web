@@ -129,7 +129,7 @@ module.exports = function(plop) {
       {
         type: 'prompt',
         name: 'reducerName',
-        message: 'Name of your reducer (e.g. "Calendar Event" or "Vehicle")',
+        message: 'Name of your reducer (without the word "reducer" in it, such as "Calendar Event")',
       },
     ],
     actions: () => {
@@ -146,18 +146,23 @@ module.exports = function(plop) {
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/index.ts',
-          templateFile: './config/plop/reducer/index.ts.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/reducer.ts',
+          templateFile: './config/plop/reducer/reducer.ts.plop',
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/index.test.tsx',
-          templateFile: './config/plop/reducer/index.test.tsx.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/reducer.test.tsx',
+          templateFile: './config/plop/reducer/reducer.test.tsx.plop',
         },
         {
           type: 'add',
           path: './src/reducers/{{pascalCase reducerName}}/types.ts',
           templateFile: './config/plop/reducer/types.ts.plop',
+        },
+        {
+          type: 'add',
+          path: './src/reducers/{{pascalCase reducerName}}/index.ts',
+          templateFile: './config/plop/reducer/index.ts.plop',
         },
       ];
 

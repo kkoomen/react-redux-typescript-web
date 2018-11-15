@@ -1,8 +1,263 @@
-// TODO: Check out what to extend.
-// TODO: Add custom ruling
-
 {
-  "extends": ["tslint-react", "tslint-eslint-rules", "tslint:recommended"],
+  "extends": ["tslint-react", "tslint-eslint-rules"],
   "defaultSeverity": "warning",
-  "rules": { }
+  "rules": {
+
+    // Enforces vertical alignment.
+    "align": [ true, "parameters" ],
+
+    "array-bracket-spacing": [true, "always", { "singleValue": false, "objectsInArray": false, "arraysInArrays": false }],
+
+    // Bans the use of specific functions or global methods.
+    "ban": false,
+
+    "block-spacing": [true, "always"],
+
+    "brace-style": [true, "1tbs"],
+
+    // Enforces PascalCased class and interface names.
+    "class-name": true,
+
+    // Enforces formatting rules for single-line comments.
+    "comment-format": [true, "check-space"],
+
+    // Enforces braces for `if`/`for`/`do`/`while` statements.
+    "curly": true,
+
+    "dot-location": ["error", "property"],
+
+    // Ensures the file ends with a newline.
+    "eofline": true,
+
+    // Requires a `for ... in` statement to be filtered with an `if` statement.
+    "forin": true,
+
+
+    "handle-callback-err": [true, "error"],
+
+    // Enforces indentation with tabs or spaces.
+    "indent": [true, "spaces", 2],
+
+    // Requires interface names to begin with a capital 'I'
+    "interface-name": [true, "never-prefix"],
+
+    // Prefer an interface declaration over a type literal (`type T = { ... }`)
+    "interface-over-type-literal": true,
+
+    // Enforces basic format rules for JSDoc comments.
+    "jsdoc-format": true,
+
+
+    "jsx-curly-spacing": [true, "never"],
+    "jsx-boolean-value": false,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "jsx-self-close": true,
+    "jsx-wrap-multiline": true,
+
+    // Only allows labels in sensible locations.
+    "label-position": true,
+
+    // Enforces a consistent linebreak style.
+    "linebreak-style": [true, "LF"],
+
+    // Requires lines to be under a certain max length.
+    "max-line-length": [ true, 150 ],
+
+    // Requires explicit visibility declarations for class members.
+    "member-access": [true, "check-accessor", "check-parameter-property"],
+
+    // Enforces member ordering.
+    "member-ordering": [ true, { "order": [ "static-field", "public-instance-field", "protected-instance-field", "private-instance-field", "constructor", "public-instance-method", "protected-instance-method", "private-instance-method" ] } ],
+
+    // Disallows usages of `any` as a type declaration.
+    "no-any": true,
+
+    // Disallows use of `arguments.callee`.
+    "no-arg": true,
+
+    // Disallows bitwise operators.
+    "no-bitwise": true,
+
+
+    // Disallows any type of assignment in conditionals.
+    "no-conditional-assignment": true,
+
+    // Disallows one or more blank lines in a row.
+    "no-consecutive-blank-lines": {"severity": "warning"},
+
+    // Bans the use of specified `console` methods.
+    "no-console": {"severity": "warning"},
+
+
+    "no-constant-condition": true,
+
+    // Disallows access to the constructors of `String`, `Number`, and `Boolean`.
+    "no-construct": true,
+
+
+    "no-control-regex": true,
+
+    // Disallows `debugger` statements.
+    "no-debugger": true,
+
+    // Disallows default exports in ES6-style modules.
+    "no-default-export": true,
+
+
+    "no-duplicate-case": true,
+
+    // Disallows default exports in ES6-style modules.
+    "no-duplicate-variable": true,
+
+
+    "no-empty-character-class": true,
+
+    // Disallows empty blocks.
+    "no-empty": [true, "allow-empty-catch"],
+
+    // Disallows `eval` function invocations.
+    "no-eval": true,
+
+
+    "no-ex-assign": true,
+
+
+    "no-extra-boolean-cast": true,
+
+
+    "no-extra-parens": ["all", { "returnAssign": false, "ignoreJSX": "all" }],
+
+
+    "no-extra-semi": true,
+
+
+    "no-inner-declarations": true,
+
+
+    "no-invalid-regexp": true,
+
+    // Disallows using the `this` keyword outside of classes.
+    "no-invalid-this": true,
+
+    // Disallows the use constant number values outside of variable assignments.
+    "no-magic-numbers": false,
+
+
+    "no-multi-spaces": true,
+
+
+    "no-regex-spaces": true,
+
+    // Disallows shadowing variable declarations.
+    "no-shadowed-variable": false,
+
+    // Forbids unnecessary string literal property access.
+    "no-string-literal": true,
+
+    // Flags throwing plain strings or concatenations of strings because only Errors produce proper stack traces.
+    "no-string-throw": true,
+
+    // Disallows falling through case statements.
+    "no-switch-case-fall-through": true,
+
+    // Disallows trailing whitespace at the end of a line.
+    "no-trailing-whitespace": true,
+
+
+    "no-unexpected-multiline": true,
+
+    // Disallows control flow statements, such as `return`, `continue` `break` and `throws` in finally blocks.
+    "no-unsafe-finally": true,
+
+    // Disallows unused expression statements.
+    "no-unused-expression": true,
+
+    // Disallows usage of variables before their declaration.
+    "no-use-before-declare": true,
+
+    // Disallows usage of the `var` keyword.
+    "no-var-keyword": true,
+
+
+    "object-curly-spacing": [true, "always", { "arraysInObjects": false, "objectsInObjects": false }],
+
+    // Enforces consistent object literal property quote style.
+    "object-literal-key-quotes": [true, "as-needed"],
+
+    // Requires the specified tokens to be on the same line as the expression preceding them.
+    "one-line": [ true, "check-catch", "check-else", "check-open-brace", "check-whitespace" ],
+
+    // Disallows multiple variable definitions in the same declaration statement.
+    "one-variable-per-declaration": [true, "ignore-for-loop"],
+
+    // Requires that variable declarations use `const` instead of `let` and `var` if possible.
+    "prefer-const": true,
+
+    // Prefer a template expression over string literal concatenation.
+    "prefer-template": true,
+
+    // Requires single or double quotes for string literals.
+    "quotemark": [true, "single", "jsx-double"],
+
+    // Requires the radix parameter to be specified when calling `parseInt`.
+    "radix": true,
+
+    // Require a `default` case in all `switch` statements.
+    "semicolon": [true, "never"],
+
+
+    "space-in-parens": [true, "never"],
+
+    // Require a `default` case in all `switch` statements.
+    "switch-default": true,
+
+
+    "ter-arrow-parens": [true, "as-needed"],
+
+
+    "ter-arrow-spacing": [true],
+
+
+    "ter-func-call-spacing": [true],
+
+
+    "ter-indent": [true, 2],
+
+
+    "ter-max-len": [true, 150],
+
+
+    "ter-no-irregular-whitespace": true,
+
+
+    "ter-no-sparse-arrays": true,
+
+
+    "ter-prefer-arrow-callback": true,
+
+    // Requires or disallows trailing commas in array and object literals, destructuring assignments, function typings, named imports and exports and function parameters.
+    "trailing-comma": [ true, { "multiline": { "objects": "always", "arrays": "always", "functions": "never", "typeLiterals": "ignore" } } ],
+
+    // Requires `===` and `!==` in place of `==` and `!=`.
+    "triple-equals": true,
+
+    // Requires or disallows whitespace for type definitions.
+    "typedef-whitespace": [ true, { "call-signature": "nospace", "index-signature": "nospace", "parameter": "nospace", "property-declaration": "nospace", "variable-declaration": "nospace" } ],
+
+    // Requires type definitions to exist.
+    "typedef": [ true, "parameter", "property-declaration" ],
+
+    // Enforces use of the `isNaN()` function to check for NaN references instead of a comparison to the `NaN` constant.
+    "use-isnan": true,
+
+
+    "valid-typeof": true,
+
+    // Checks variable names for various errors.
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"],
+
+    // Enforces whitespace style conventions.
+    "whitespace": [ true, "check-branch", "check-decl", "check-module", "check-operator", "check-separator", "check-type", "check-typecast" ]
+  }
 }

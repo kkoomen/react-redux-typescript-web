@@ -24,8 +24,8 @@ module.exports = function(plop) {
       const actions = [
         {
           type: 'add',
-          path: './src/components/{{pascalCase componentName}}/{{pascalCase componentName}}.test.tsx',
-          templateFile: './config/plop/component/component.test.tsx.plop',
+          path: './src/components/{{pascalCase componentName}}/__tests__/{{pascalCase componentName}}.test.tsx',
+          templateFile: './config/plop/component/__tests__/component.test.tsx.plop',
         },
       ];
 
@@ -86,8 +86,8 @@ module.exports = function(plop) {
       const actions = [
         {
           type: 'add',
-          path: './src/containers/{{pascalCase containerName}}/{{pascalCase containerName}}.test.tsx',
-          templateFile: './config/plop/container/container.test.tsx.plop',
+          path: './src/containers/{{pascalCase containerName}}/__tests__/{{pascalCase containerName}}.test.tsx',
+          templateFile: './config/plop/container/__tests__/container.test.tsx.plop',
         },
       ];
 
@@ -141,8 +141,8 @@ module.exports = function(plop) {
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/actions.test.tsx',
-          templateFile: './config/plop/reducer/actions.test.tsx.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/__tests__/actions.test.tsx',
+          templateFile: './config/plop/reducer/__tests__/actions.test.tsx.plop',
         },
         {
           type: 'add',
@@ -151,8 +151,8 @@ module.exports = function(plop) {
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/reducer.test.tsx',
-          templateFile: './config/plop/reducer/reducer.test.tsx.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/__tests__/reducer.test.tsx',
+          templateFile: './config/plop/reducer/r__tests__/educer.test.tsx.plop',
         },
         {
           type: 'add',

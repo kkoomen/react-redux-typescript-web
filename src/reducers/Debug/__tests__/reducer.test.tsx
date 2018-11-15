@@ -1,5 +1,5 @@
-import reducer, { initialState } from './';
-import { DebugActionTypes } from './types';
+import reducer, { initialState } from '../reducer';
+import { DebugActionTypes } from '../types';
 
 describe('Debug reducer', () => {
   let state = reducer(undefined, {});

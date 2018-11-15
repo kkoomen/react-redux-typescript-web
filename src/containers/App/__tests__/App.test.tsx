@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import {{pascalCase containerName}} from './';
+import App from '../';
 
-describe('{{pascalCase containerName}}', () => {
+describe('App', () => {
   it('should match its snapshot', () => {
-    const element = shallow(<{{pascalCase containerName}} />);
+    const element = shallow(<App />);
     expect(toJson(element)).toMatchSnapshot();
   });
 });

@@ -4,8 +4,7 @@ import { RouterState } from 'connected-react-router';
 import { persistReducer } from 'redux-persist'
 import { History } from 'history';
 
-import debugReducer from './Debug';
-import { DebugState } from './Debug/types';
+import debugReducer, { DebugState } from './Debug';
 
 export interface AppState {
   router: RouterState,

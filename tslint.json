@@ -1,0 +1,409 @@
+{
+  "extends": ["tslint-react", "tslint-eslint-rules"],
+  "defaultSeverity": "warning",
+  "rules": {
+
+    // Enforces vertical alignment.
+    // https://palantir.github.io/tslint/rules/align
+    "align": [ true, "parameters" ],
+
+    // Disallow or enforce spaces inside of brackets.
+    // https://eslint.org/docs/rules/array-bracket-spacing
+    "array-bracket-spacing": [true, "always", { "singleValue": false, "objectsInArray": false, "arraysInArrays": false }],
+
+    // Bans the use of specific functions or global methods.
+    // https://palantir.github.io/tslint/rules/ban
+    "ban": false,
+
+    // Disallow or enforce spaces inside of blocks after opening block and
+    // before closing block.
+    // https://eslint.org/docs/rules/block-spacing
+    "block-spacing": [true, "always"],
+
+    // Require Brace Style.
+    // https://eslint.org/docs/rules/brace-style
+    "brace-style": [true, "1tbs"],
+
+    // Enforces PascalCased class and interface names.
+    // https://github.com/bradzacher/eslint-plugin-typescript/blob/master/docs/rules/class-name-casing.md
+    "class-name": true,
+
+    // Require or disallow a space immediately following the // or /* in a comment.
+    // https://palantir.github.io/tslint/rules/comment-format
+    "comment-format": [true, "check-space"],
+
+    // specify curly brace conventions for all control statements
+    // http://palantir.github.io/tslint/rules/curly
+    "curly": true,
+
+    // Enforces consistent newlines before or after dots.
+    // http://eslint.org/docs/rules/dot-location
+    "dot-location": ["error", "property"],
+
+    // Enforce newline at the end of file, with no multiple empty lines.
+    // https://palantir.github.io/tslint/rules/eofline
+    "eofline": true,
+
+    // Make sure for-in loops have an if statement.
+    // http://palantir.github.io/tslint/rules/forin
+    "forin": true,
+
+    // Enforce error handling in callbacks
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/handleCallbackErrRule.md
+    "handle-callback-err": [true, "error"],
+
+    // Enforces indentation with tabs or spaces.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terIndentRule.md
+    "indent": [true, "spaces", 2],
+
+    // Requires interface names to begin with a capital 'I'.
+    // https://palantir.github.io/tslint/rules/interface-name
+    "interface-name": [true, "never-prefix"],
+
+    // Prefer an interface declaration over a type literal (`type T = { ... }`)
+    // https://palantir.github.io/tslint/rules/interface-over-type-literal
+    "interface-over-type-literal": true,
+
+    // Enforces basic format rules for JSDoc comments.
+    // https://palantir.github.io/tslint/rules/jsdoc-format
+    "jsdoc-format": true,
+
+    // Requires or bans spaces between curly brace characters in JSX.
+    // https://github.com/palantir/tslint-react
+    "jsx-curly-spacing": [true, "never"],
+
+    // When using a boolean attribute in JSX, you can set the attribute value
+    // to true or omit the value. This rule will enforce one or the other to
+    // keep consistency in your code.
+    // https://github.com/palantir/tslint-react
+    "jsx-boolean-value": false,
+
+    // Creating new anonymous functions (with either the function syntax or
+    // ES2015 arrow syntax) inside the render call stack works against pure
+    // component rendering. When doing an equality check between two lambdas,
+    // React will always consider them unequal values and force the component
+    // to re-render more often than necessary.
+    // https://github.com/palantir/tslint-react
+    "jsx-no-lambda": false,
+
+    // Disallows multiline JS expressions inside JSX blocks to promote
+    // readability.
+    // https://github.com/palantir/tslint-react
+    "jsx-no-multiline-js": false,
+
+    // Enforces that JSX elements with no children are self-closing.
+    // https://github.com/palantir/tslint-react
+    "jsx-self-close": true,
+
+    // Enforces that multiline JSX expressions are wrapped with parentheses.
+    // https://github.com/palantir/tslint-react
+    "jsx-wrap-multiline": true,
+
+    // Enforces a consistent style for multiline JSX elements which promotes
+    // ease of editing via line-wise manipulations as well as maintainability
+    // via small diffs when changes are made.
+    // https://github.com/palantir/tslint-react
+    "jsx-alignment": true,
+
+    // Requires or bans spaces before and after the = token in JSX element
+    // attributes.
+    // https://github.com/palantir/tslint-react
+    "jsx-equals-spacing": [true, "never"],
+
+    // Warns for missing key props in JSX element array literals and inside
+    // return statements of Array.prototype.map callbacks.
+    // https://github.com/palantir/tslint-react
+    "jsx-key": true,
+
+    // Forbids function binding in JSX attributes. This has the same intent as
+    // jsx-no-lambda in helping you avoid excessive re-renders.
+    // https://github.com/palantir/tslint-react
+    "jsx-no-bind": true,
+
+    // Passing strings to the ref prop of React elements is considered a legacy
+    // feature and will soon be deprecated. Instead, use a callback.
+    // https://github.com/palantir/tslint-react
+    "jsx-no-string-ref": true,
+
+    // Disallow use of labeled statements.
+    // https://palantir.github.io/tslint/rules/label-position
+    "label-position": true,
+
+    // Disallow mixed 'LF' and 'CRLF' as linebreaks
+    // https://palantir.github.io/tslint/rules/linebreak-style
+    "linebreak-style": [true, "LF"],
+
+    // Requires lines to be under a certain max length.
+    // https://palantir.github.io/tslint/rules/max-line-length
+    "max-line-length": [true, 80],
+
+    // Requires explicit visibility declarations for class members.
+    // https://palantir.github.io/tslint/rules/member-access
+    "member-access": [true, "check-accessor", "check-parameter-property"],
+
+    // Enforces member ordering.
+    // https://palantir.github.io/tslint/rules/member-ordering
+    "member-ordering": [ true, { "order": [ "static-field", "public-instance-field", "protected-instance-field", "private-instance-field", "constructor", "public-instance-method", "protected-instance-method", "private-instance-method" ] } ],
+
+    // Disallows usages of `any` as a type declaration.
+    // https://palantir.github.io/tslint/rules/no-any
+    "no-any": true,
+
+    // Disallows use of `arguments.callee`.
+    // https://palantir.github.io/tslint/rules/no-arg
+    "no-arg": true,
+
+    // Disallows bitwise operators.
+    // https://palantir.github.io/tslint/rules/no-bitwise
+    "no-bitwise": ["error"],
+
+    // Disallows any type of assignment in conditionals.
+    // https://palantir.github.io/tslint/rules/no-conditional-assignment
+    "no-conditional-assignment": true,
+
+    // Disallows one or more blank lines in a row.
+    // https://palantir.github.io/tslint/rules/no-consecutive-blank-lines
+    "no-consecutive-blank-lines": {"severity": "warning"},
+
+    // Bans the use of specified `console` methods.
+    // https://palantir.github.io/tslint/rules/no-console
+    "no-console": {"severity": "warning"},
+
+    // Disallow use of constant expressions in conditions.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noConstantConditionRule.md
+    "no-constant-condition": true,
+
+    // Disallows creating new instances of String, Number, and Boolean
+    // https://palantir.github.io/tslint/rules/no-construct
+    "no-construct": true,
+
+    // Disallow control characters in regular expressions
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noControlRegexRule.md
+    "no-control-regex": true,
+
+    // Disallow use of `debugger`.
+    // http://palantir.github.io/tslint/rules/no-debugger
+    "no-debugger": true,
+
+    // Disallows default exports in ES6-style modules.
+    // https://palantir.github.io/tslint/rules/no-default-export
+    "no-default-export": true,
+
+    // Disallow a duplicate case label.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noDuplicateCaseRule.md
+    "no-duplicate-case": true,
+
+    // Disallow declaring the same variable more than once.
+    // http://palantir.github.io/tslint/rules/no-duplicate-variable
+    "no-duplicate-variable": true,
+
+    // Disallow the use of empty character classes in regular expressions.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noEmptyCharacterClassRule.md
+    "no-empty-character-class": true,
+
+    // Disallow empty statements.
+    // http://palantir.github.io/tslint/rules/no-empty
+    "no-empty": [true, "allow-empty-catch"],
+
+    // Disallow use of `eval()`
+    // http://palantir.github.io/tslint/rules/no-eval
+    "no-eval": true,
+
+    // Disallow assigning to the exception in a `catch` block
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noExAssignRule.md
+    "no-ex-assign": true,
+
+    // Disallow double-negation boolean casts in a boolean context
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noExtraBooleanCastRule.md
+    "no-extra-boolean-cast": true,
+
+    // Disallow unnecessary parentheses.
+    // http://eslint.org/docs/rules/no-extra-parens
+    "no-extra-parens": ["all", { "returnAssign": false, "ignoreJSX": "all" }],
+
+    // Disallow unnecessary semicolons.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noExtraSemiRule.md
+    "no-extra-semi": true,
+
+    // Disallow function or variable declarations in nested blocks.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noInnerDeclarationsRule.md
+    "no-inner-declarations": true,
+
+    // Disallow invalid regular expression strings in the `RegExp` constructor.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noInvalidRegexpRule.md
+    "no-invalid-regexp": true,
+
+    // Disallow this keywords outside of classes or class-like objects.
+    // https://palantir.github.io/tslint/rules/no-invalid-this
+    "no-invalid-this": true,
+
+    // Disallow the use of magic numbers.
+    // https://palantir.github.io/tslint/rules/no-magic-numbers
+    "no-magic-numbers": false,
+
+    // Disallow use of multiple spaces.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noMultiSpacesRule.md
+    "no-multi-spaces": true,
+
+    // Disallow multiple spaces in a regular expression literal.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noRegexSpacesRule.md
+    "no-regex-spaces": true,
+
+    // Disallow declaration of variables already declared in the outer scope.
+    // http://palantir.github.io/tslint/rules/no-shadowed-variable
+    "no-shadowed-variable": false,
+
+    // Forbids unnecessary string literal property access.
+    // Forbids unnecessary string literal property access.
+    // Allows `obj["prop-erty"]` (can’t be a regular property access).
+    // Disallows `obj["property"]` (should be `obj.property`).
+    // https://palantir.github.io/tslint/rules/no-string-literal
+    "no-string-literal": true,
+
+    // Restrict what can be thrown as an exception.
+    // https://palantir.github.io/tslint/rules/no-string-throw
+    "no-string-throw": true,
+
+    // Disallow fallthrough of case statements.
+    // http://palantir.github.io/tslint/rules/no-switch-case-fall-through
+    "no-switch-case-fall-through": true,
+
+    // Disallow trailing whitespace at the end of lines.
+    // http://palantir.github.io/tslint/rules/no-trailing-whitespace
+    "no-trailing-whitespace": true,
+
+    // Avoid code that looks like two expressions but is actually one.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noUnexpectedMultilineRule.md
+    "no-unexpected-multiline": true,
+
+    // Disallow unreachable statements after a return, throw, continue, or
+    // break statement.
+    // https://palantir.github.io/tslint/rules/no-unsafe-finally
+    "no-unsafe-finally": true,
+
+    // Disallow use of the new operator when not part of an assignment or
+    // comparison.
+    // https://palantir.github.io/tslint/rules/no-unused-expression
+    "no-unused-expression": true,
+
+    // Disallow use of variables before they are defined.
+    // http://palantir.github.io/tslint/rules/no-use-before-declare
+    "no-use-before-declare": true,
+
+    // Require `let` or `const` instead of `var`.
+    // http://palantir.github.io/tslint/rules/no-var-keyword
+    "no-var-keyword": true,
+
+    // Require or disallow padding inside curly braces.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/objectCurlySpacingRule.md
+    "object-curly-spacing": [true, "always", { "arraysInObjects": false, "objectsInObjects": false }],
+
+    // Require quotes around object literal property names.
+    // https://palantir.github.io/tslint/rules/object-literal-key-quotes
+    "object-literal-key-quotes": [true, "as-needed"],
+
+    // Requires the specified tokens to be on the same line as the expression
+    // preceding them.
+    // https://palantir.github.io/tslint/rules/one-line
+    "one-line": [ true, "check-catch", "check-else", "check-open-brace", "check-whitespace" ],
+
+    // Require or disallow one variable declaration per function.
+    // http://palantir.github.io/tslint/rules/one-variable-per-declaration/
+    "one-variable-per-declaration": [true, "ignore-for-loop"],
+
+    // suggest using `const` declaration for variables that are never modified
+    // after declared.
+    // https://palantir.github.io/tslint/rules/prefer-const
+    "prefer-const": true,
+
+    // Suggest using template literals instead of strings concatenation.
+    // http://eslint.org/docs/rules/prefer-template
+    "prefer-template": true,
+
+    // Specify whether backticks, double or single quotes should be used.
+    // http://palantir.github.io/tslint/rules/quotemark
+    "quotemark": [true, "single", "jsx-double"],
+
+    // Require use of the second argument for `parseInt()`.
+    // http://palantir.github.io/tslint/rules/radix
+    "radix": true,
+
+    // Require or disallow use of semicolons instead of ASI.
+    // http://palantir.github.io/tslint/rules/semicolon
+    "semicolon": [true, "never"],
+
+    // Require or disallow spaces inside parentheses.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/spaceInParensRule.md
+    "space-in-parens": [true, "never"],
+
+    // Require a `default` case in `switch` statements.
+    // http://palantir.github.io/tslint/rules/switch-default
+    "switch-default": true,
+
+    // Require parens in arrow function arguments.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terArrowParensRule.md
+    "ter-arrow-parens": [true, "as-needed"],
+
+    // Require space before/after arrow function's arrow.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terArrowSpacingRule.md
+    "ter-arrow-spacing": [true],
+
+    // Require or disallow spacing between function identifiers and their
+    // invocations.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terFuncCallSpacingRule.md
+    "ter-func-call-spacing": [true],
+
+    // Enforce consistent indentation.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terIndentRule.md
+    "ter-indent": [true, 2],
+
+    // Enforce a maximum line length.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terMaxLenRule.md
+    "ter-max-len": [true, 80],
+
+    // Disallow irregular whitespace.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terNoIrregularWhitespaceRule.md
+    "ter-no-irregular-whitespace": true,
+
+    // Disallow sparse arrays.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terNoSparseArraysRule.md
+    "ter-no-sparse-arrays": true,
+
+    // Require arrow functions as callbacks.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terPreferArrowCallbackRule.md
+    "ter-prefer-arrow-callback": true,
+
+    // Disallow or enforce trailing commas.
+    // http://palantir.github.io/tslint/rules/trailing-comma
+    "trailing-comma": [ true, { "multiline": { "objects": "always", "arrays": "always", "functions": "never", "typeLiterals": "ignore" } } ],
+
+    // Require the use of `===` and `!==`.
+    // http://palantir.github.io/tslint/rules/triple-equals
+    "triple-equals": true,
+
+    // Requires or disallows whitespace for type definitions.
+    // https://palantir.github.io/tslint/rules/typedef-whitespace
+    "typedef-whitespace": [ true, { "call-signature": "nospace", "index-signature": "nospace", "parameter": "nospace", "property-declaration": "nospace", "variable-declaration": "nospace" } ],
+
+    // Requires type definitions to exist.
+    // https://palantir.github.io/tslint/rules/typedef
+    "typedef": [ true, "parameter", "property-declaration" ],
+
+    // Enforces use of the `isNaN()` function to check for NaN references
+    // instead of a comparison to the `NaN` constant.
+    // https://palantir.github.io/tslint/rules/use-isnan
+    "use-isnan": true,
+
+    // Ensure that the results of typeof are compared against a valid string.
+    // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/validTypeofRule.md
+    "valid-typeof": true,
+
+    // Checks variable names for various errors.
+    // http://palantir.github.io/tslint/rules/variable-name
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"],
+
+    // Enforces whitespace style conventions.
+    // https://palantir.github.io/tslint/rules/whitespace
+    "whitespace": [ true, "check-branch", "check-decl", "check-module", "check-operator", "check-separator", "check-type", "check-typecast" ]
+  }
+}

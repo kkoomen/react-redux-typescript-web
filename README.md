@@ -1,44 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Introduction
 
-## Available Scripts
+An extension of create-react-app 2 (ejected) with some extras:
 
-In the project directory, you can run:
+- [x] hot reloading :fire:
+- [x] linters (tslint)
+- [x] redux
+- [x] redux-thunk
+- [x] routing
+- [x] basic structure
+- [ ] local storage (for redux state persistance)
+- [ ] ImmutableJS
+- [ ] Bootstrap 4
+- [ ] i18n
 
-### `npm start`
+This extension also has built-in support for the following extensions:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension#installation)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+# Scripts
 
-### `npm test`
+### `yarn start`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the app in the development mode.<br />
+Open http://localhost:3000 to view it in the browser.<br />
 
-### `npm run build`
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.<br />
 
-Builds the app for production to the `build` folder.<br>
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.<br />
+See the section about running tests for more information.
+
+### `yarn test:update`
+
+Same as `yarn test` but before going into an interactive watch mode it will
+update all the snapshots.
+
+### `yarn build`
+
+Builds the app for production to the build folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
+The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `yarn plop`
 
-### `npm run eject`
+Use this command to generate components, containers, actions & reducers.<br />
+Especially because of the typescript usage making a component and writing basic
+tests may take a long time. Use the generator to instantly create components,
+containers, actions & reducers that have basic tests and correct typings setup
+already. Also a more consistent code style will be used throughout the codebase
+if generators are used.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Getting started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Clone the repository
+- (optional, but recommended) Go into `package.json` and set the `name` property
+  at the top to your new project its name.
+- Run `yarn install`
+- Run `yarn start`

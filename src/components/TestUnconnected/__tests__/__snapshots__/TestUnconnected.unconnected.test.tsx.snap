@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`TestUnconnected component should match its snapshot by default 1`] = `
-<div
-  className="TestUnconnected"
-/>
-`;

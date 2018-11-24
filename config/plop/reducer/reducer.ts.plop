@@ -1,4 +1,4 @@
-import { ActionType } from  'typesafe-actions';
+import { ActionType } from 'typesafe-actions';
 import { Reducer } from 'redux';
 import { {{pascalCase reducerName}}State, {{pascalCase reducerName}}ActionTypes } from './types';
 import * as {{pascalCase reducerName}}Actions from './actions';

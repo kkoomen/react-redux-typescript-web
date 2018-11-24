@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import {{pascalCase containerName}} from './{{pascalCase containerName}}';
+import { {{pascalCase containerName}} as {{pascalCase containerName}}Container } from './{{pascalCase containerName}}';
 import { AppState } from '../../reducers';
 
 function mapStateToProps(state: AppState) {
   return {};
 }
 
-export default connect(mapStateToProps)({{pascalCase containerName}});
+export const {{pascalCase containerName}} = connect(mapStateToProps)({{pascalCase containerName}}Container);

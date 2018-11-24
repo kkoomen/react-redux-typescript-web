@@ -4,7 +4,7 @@ import { RouterState } from 'connected-react-router';
 import { persistReducer } from 'redux-persist'
 import { History } from 'history';
 
-import debugReducer, { DebugState } from './Debug';
+import { debugReducer, DebugState } from './Debug';
 
 export interface AppState {
   router: RouterState,
@@ -22,4 +22,4 @@ const rootReducer = (history: History) => combineReducers<AppState>({
   debug: debugReducer,
 });
 
-export default rootReducer;
+export { rootReducer };

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Debug from './Debug';
+import { Debug as DebugComponent } from './Debug';
 import { AppState } from '../../reducers';
 
 function mapStateToProps(state: AppState) {
@@ -8,4 +8,4 @@ function mapStateToProps(state: AppState) {
   };
 }
 
-export default connect(mapStateToProps)(Debug);
+export const Debug = connect(mapStateToProps)(DebugComponent);

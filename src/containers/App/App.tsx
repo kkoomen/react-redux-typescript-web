@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 import { __DEBUG__ } from '../../config/constants';
-import Debug from '../../components/Debug';
+import { Debug } from '../../components/Debug';
 
 interface Props {};
 interface State {};
 
-class App extends Component<Props, State> {
-  state: State = {};
+export class App extends Component<Props, State> {
+  public state = {};
 
-  render() {
+  public render() {
     return (
       <div className="App">
         {__DEBUG__ && <Debug />}
@@ -17,5 +17,3 @@ class App extends Component<Props, State> {
     );
   }
 }
-
-export default App

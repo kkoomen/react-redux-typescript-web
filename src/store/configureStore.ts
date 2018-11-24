@@ -1,10 +1,17 @@
-import { Store, createStore, applyMiddleware, compose } from 'redux'
+import {
+  Store,
+  createStore,
+  applyMiddleware,
+  compose,
+  Middleware,
+  StoreEnhancer,
+} from 'redux';
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 import { createLogger } from 'redux-logger';
 import { History } from 'history'
 import thunk from 'redux-thunk';
 import { __DEBUG__ } from '../config/constants';
-import rootReducer, { AppState } from '../reducers';
+import { rootReducer, AppState } from '../reducers';
 
 // Compose with the devtools extension when in a non-production environment.
 const composeEnhancers = (
@@ -13,13 +20,12 @@ const composeEnhancers = (
   && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 ) || compose;
 
-
-export default function configureStore(
+export function configureStore(
   history: History,
-  initialState: object,
+  initialState: object
 ): Store<AppState> {
-  const enhancers: any[] = [];
-  const middlewares: any[] = [
+  const enhancers: StoreEnhancer[] = [];
+  const middlewares: Middleware[] = [
     thunk,
     routerMiddleware(history),
   ];
@@ -46,7 +52,7 @@ export default function configureStore(
   const store = createStore(
     rootReducer(history),
     initialState,
-    composedEnhancers,
+    composedEnhancers
   );
 
   return store;

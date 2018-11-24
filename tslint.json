@@ -5,11 +5,15 @@
 
     // Enforces vertical alignment.
     // https://palantir.github.io/tslint/rules/align
-    "align": [ true, "parameters" ],
+    "align": [true, "parameters"],
 
     // Disallow or enforce spaces inside of brackets.
     // https://eslint.org/docs/rules/array-bracket-spacing
-    "array-bracket-spacing": [true, "always", { "singleValue": false, "objectsInArray": false, "arraysInArrays": false }],
+    "array-bracket-spacing": [true, "always", {
+      "singleValue": false,
+      "objectsInArray": false,
+      "arraysInArrays": false
+    }],
 
     // Bans the use of specific functions or global methods.
     // https://palantir.github.io/tslint/rules/ban
@@ -135,7 +139,7 @@
 
     // Requires lines to be under a certain max length.
     // https://palantir.github.io/tslint/rules/max-line-length
-    "max-line-length": [true, 80],
+    "max-line-length": [false, 80],
 
     // Requires explicit visibility declarations for class members.
     // https://palantir.github.io/tslint/rules/member-access
@@ -143,7 +147,18 @@
 
     // Enforces member ordering.
     // https://palantir.github.io/tslint/rules/member-ordering
-    "member-ordering": [ true, { "order": [ "static-field", "public-instance-field", "protected-instance-field", "private-instance-field", "constructor", "public-instance-method", "protected-instance-method", "private-instance-method" ] } ],
+    "member-ordering": [false, {
+      "order": [
+        "static-field",
+        "public-instance-field",
+        "protected-instance-field",
+        "private-instance-field",
+        "constructor",
+        "public-instance-method",
+        "protected-instance-method",
+        "private-instance-method"
+      ]
+    }],
 
     // Disallows usages of `any` as a type declaration.
     // https://palantir.github.io/tslint/rules/no-any
@@ -163,11 +178,11 @@
 
     // Disallows one or more blank lines in a row.
     // https://palantir.github.io/tslint/rules/no-consecutive-blank-lines
-    "no-consecutive-blank-lines": {"severity": "warning"},
+    "no-consecutive-blank-lines": { "severity": "warning" },
 
     // Bans the use of specified `console` methods.
     // https://palantir.github.io/tslint/rules/no-console
-    "no-console": {"severity": "warning"},
+    "no-console": false,
 
     // Disallow use of constant expressions in conditions.
     // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noConstantConditionRule.md
@@ -219,11 +234,14 @@
 
     // Disallow unnecessary parentheses.
     // http://eslint.org/docs/rules/no-extra-parens
-    "no-extra-parens": ["all", { "returnAssign": false, "ignoreJSX": "all" }],
+    "no-extra-parens": ["all", {
+      "returnAssign": false,
+      "ignoreJSX": "all"
+    }],
 
     // Disallow unnecessary semicolons.
     // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noExtraSemiRule.md
-    "no-extra-semi": true,
+    "no-extra-semi": false,
 
     // Disallow function or variable declarations in nested blocks.
     // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/noInnerDeclarationsRule.md
@@ -286,17 +304,16 @@
     // https://palantir.github.io/tslint/rules/no-unused-expression
     "no-unused-expression": true,
 
-    // Disallow use of variables before they are defined.
-    // http://palantir.github.io/tslint/rules/no-use-before-declare
-    "no-use-before-declare": true,
-
     // Require `let` or `const` instead of `var`.
     // http://palantir.github.io/tslint/rules/no-var-keyword
     "no-var-keyword": true,
 
     // Require or disallow padding inside curly braces.
     // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/objectCurlySpacingRule.md
-    "object-curly-spacing": [true, "always", { "arraysInObjects": false, "objectsInObjects": false }],
+    "object-curly-spacing": [true, "always", {
+      "arraysInObjects": false,
+      "objectsInObjects": false
+    }],
 
     // Require quotes around object literal property names.
     // https://palantir.github.io/tslint/rules/object-literal-key-quotes
@@ -305,7 +322,13 @@
     // Requires the specified tokens to be on the same line as the expression
     // preceding them.
     // https://palantir.github.io/tslint/rules/one-line
-    "one-line": [ true, "check-catch", "check-else", "check-open-brace", "check-whitespace" ],
+    "one-line": [
+      true,
+      "check-catch",
+      "check-else",
+      "check-open-brace",
+      "check-whitespace"
+    ],
 
     // Require or disallow one variable declaration per function.
     // http://palantir.github.io/tslint/rules/one-variable-per-declaration/
@@ -330,7 +353,7 @@
 
     // Require or disallow use of semicolons instead of ASI.
     // http://palantir.github.io/tslint/rules/semicolon
-    "semicolon": [true, "never"],
+    "semicolon": [false, "never"],
 
     // Require or disallow spaces inside parentheses.
     // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/spaceInParensRule.md
@@ -342,7 +365,7 @@
 
     // Require parens in arrow function arguments.
     // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terArrowParensRule.md
-    "ter-arrow-parens": [true, "as-needed"],
+    "ter-arrow-parens": [true, "always"],
 
     // Require space before/after arrow function's arrow.
     // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terArrowSpacingRule.md
@@ -355,11 +378,13 @@
 
     // Enforce consistent indentation.
     // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terIndentRule.md
-    "ter-indent": [true, 2],
+    "ter-indent": [true, 2, {
+      "SwitchCase": true
+    }],
 
     // Enforce a maximum line length.
     // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terMaxLenRule.md
-    "ter-max-len": [true, 80],
+    "ter-max-len": [false, 80],
 
     // Disallow irregular whitespace.
     // https://github.com/buzinas/tslint-eslint-rules/blob/master/src/docs/rules/terNoIrregularWhitespaceRule.md
@@ -375,7 +400,14 @@
 
     // Disallow or enforce trailing commas.
     // http://palantir.github.io/tslint/rules/trailing-comma
-    "trailing-comma": [ true, { "multiline": { "objects": "always", "arrays": "always", "functions": "never", "typeLiterals": "ignore" } } ],
+    "trailing-comma": [true, {
+      "multiline": {
+        "objects": "always",
+        "arrays": "always",
+        "functions": "never",
+        "typeLiterals": "ignore"
+      }
+    }],
 
     // Require the use of `===` and `!==`.
     // http://palantir.github.io/tslint/rules/triple-equals
@@ -383,11 +415,17 @@
 
     // Requires or disallows whitespace for type definitions.
     // https://palantir.github.io/tslint/rules/typedef-whitespace
-    "typedef-whitespace": [ true, { "call-signature": "nospace", "index-signature": "nospace", "parameter": "nospace", "property-declaration": "nospace", "variable-declaration": "nospace" } ],
+    "typedef-whitespace": [true, {
+      "call-signature": "nospace",
+      "index-signature": "nospace",
+      "parameter": "nospace",
+      "property-declaration": "nospace",
+      "variable-declaration": "nospace"
+    }],
 
     // Requires type definitions to exist.
     // https://palantir.github.io/tslint/rules/typedef
-    "typedef": [ true, "parameter", "property-declaration" ],
+    "typedef": [true, "parameter", "property-declaration"],
 
     // Enforces use of the `isNaN()` function to check for NaN references
     // instead of a comparison to the `NaN` constant.
@@ -400,10 +438,25 @@
 
     // Checks variable names for various errors.
     // http://palantir.github.io/tslint/rules/variable-name
-    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ],
 
     // Enforces whitespace style conventions.
     // https://palantir.github.io/tslint/rules/whitespace
-    "whitespace": [ true, "check-branch", "check-decl", "check-module", "check-operator", "check-separator", "check-type", "check-typecast" ]
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-module",
+      "check-operator",
+      "check-separator",
+      "check-type",
+      "check-typecast"
+    ]
   }
 }

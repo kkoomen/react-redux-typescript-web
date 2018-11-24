@@ -14,9 +14,9 @@ class {{pascalCase componentName}} extends Component<{{pascalCase componentName}
 {{else}}
 class {{pascalCase componentName}} extends Component<Props, State> {
 {{/if}}
-  state = {};
+  public state = {};
 
-  render() {
+  public render() {
     return (
       <div className="{{pascalCase componentName}}" />
     );

@@ -1,4 +1,4 @@
-import { ActionType } from  'typesafe-actions';
+import { ActionType } from 'typesafe-actions';
 import { Reducer } from 'redux';
 import { DebugState, DebugActionTypes } from './types';
 import * as DebugActions from './actions';
@@ -11,7 +11,7 @@ export const initialState: DebugState = {
 
 export type DebugAction = ActionType<typeof DebugActions>;
 
-const debugReducer: Reducer<DebugState, DebugAction> = (state = initialState, action) => {
+export const debugReducer: Reducer<DebugState, DebugAction> = (state = initialState, action) => {
   switch (action.type) {
     case DebugActionTypes.ENABLE_ACTION_LOGS: {
       return {
@@ -38,5 +38,3 @@ const debugReducer: Reducer<DebugState, DebugAction> = (state = initialState, ac
     }
   }
 };
-
-export default debugReducer;

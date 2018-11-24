@@ -83,7 +83,10 @@
     "collectCoverage": true,
     "coverageDirectory": "<rootDir>/coverage",
     "collectCoverageFrom": [
-      "src/{components,containers,reducers}/**/*.{ts,tsx}"
+      "src/components/**/*.{ts,tsx}",
+      "src/containers/**/*.{ts,tsx}",
+      "src/reducers/**/*.{ts,tsx}",
+      "!src/reducers/index.{ts,tsx}"
     ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [

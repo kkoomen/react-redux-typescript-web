@@ -1,5 +1,9 @@
+import { {{camelCase reducerName}}Reducer, initialState as {{camelCase reducerName}}State } from './reducer';
 import * as {{camelCase reducerName}}Actions from './actions';
 
 export { {{camelCase reducerName}}Actions };
 export * from './types';
-export { {{camelCase reducerName}}Reducer } from './reducer';
+export {
+  {{camelCase reducerName}}Reducer,
+  {{camelCase reducerName}}State,
+};

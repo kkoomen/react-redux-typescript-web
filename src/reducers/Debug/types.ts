@@ -1,10 +1,8 @@
-import { DeepReadonly } from 'utility-types';
-
-export type DebugState = DeepReadonly<{
+export interface DebugState {
   logs: {
     enabled: boolean,
   },
-}>;
+};
 
 export enum DebugActionTypes {
   ENABLE_ACTION_LOGS = '@@debug/ENABLE_ACTION_LOGS',

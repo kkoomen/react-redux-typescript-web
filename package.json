@@ -61,7 +61,6 @@
     "typesafe-actions": "^2.0.4",
     "typescript": "3.1.6",
     "url-loader": "1.1.2",
-    "utility-types": "^2.1.0",
     "webpack": "4.25.1",
     "webpack-dev-server": "3.1.10",
     "webpack-manifest-plugin": "2.0.4",
@@ -81,11 +80,17 @@
     "not op_mini all"
   ],
   "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/coverage",
+    "collectCoverageFrom": [
+      "src/{components,containers,reducers}/**/*.{ts,tsx}"
+    ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
-      "react-app-polyfill/jsdom"
+      "react-app-polyfill/jsdom",
+      "<rootDir>/config/jest/shim.js"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>config/jest/setup.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/config/jest/setup.js",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"

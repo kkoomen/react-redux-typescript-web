@@ -1,6 +1,5 @@
 import { combineReducers, Dispatch, Action, AnyAction } from 'redux'
-import { connectRouter } from 'connected-react-router'
-import { RouterState } from 'connected-react-router';
+import { connectRouter, RouterState } from 'connected-react-router';
 import { persistReducer } from 'redux-persist'
 import { History } from 'history';
 

@@ -21,40 +21,48 @@ module.exports = function(plop) {
       },
     ],
     actions: ({ stateless, connected }) => {
-      const actions = [
-        {
-          type: 'add',
-          path: './src/components/{{pascalCase componentName}}/__tests__/{{pascalCase componentName}}.test.tsx',
-          templateFile: './config/plop/component/__tests__/component.test.tsx.plop',
-        },
-      ];
+      const actions = [];
 
       if (stateless) {
         actions.push({
           type: 'add',
-          path: './src/components/{{pascalCase componentName}}/{{pascalCase componentName}}.tsx',
           templateFile: './config/plop/component/component.stateless.tsx.plop',
+          path: './src/components/{{pascalCase componentName}}/{{pascalCase componentName}}.tsx',
         });
       } else {
         actions.push({
           type: 'add',
-          path: './src/components/{{pascalCase componentName}}/{{pascalCase componentName}}.tsx',
           templateFile: './config/plop/component/component.tsx.plop',
+          path: './src/components/{{pascalCase componentName}}/{{pascalCase componentName}}.tsx',
         });
       }
 
       if (connected) {
-        actions.push({
-          type: 'add',
-          path: './src/components/{{pascalCase componentName}}/index.tsx',
-          templateFile: './config/plop/component/index.connected.tsx.plop',
-        });
+        actions.push(
+          {
+            type: 'add',
+            templateFile: './config/plop/component/index.connected.ts.plop',
+            path: './src/components/{{pascalCase componentName}}/index.ts',
+          },
+          {
+            type: 'add',
+            templateFile: './config/plop/component/__tests__/component.connected.test.tsx.plop',
+            path: './src/components/{{pascalCase componentName}}/__tests__/{{pascalCase componentName}}.connected.test.tsx',
+          },
+        );
       } else {
-        actions.push({
-          type: 'add',
-          path: './src/components/{{pascalCase componentName}}/index.tsx',
-          templateFile: './config/plop/component/index.unconnected.tsx.plop',
-        });
+        actions.push(
+          {
+            type: 'add',
+            templateFile: './config/plop/component/index.unconnected.ts.plop',
+            path: './src/components/{{pascalCase componentName}}/index.ts',
+          },
+          {
+            type: 'add',
+            templateFile: './config/plop/component/__tests__/component.unconnected.test.tsx.plop',
+            path: './src/components/{{pascalCase componentName}}/__tests__/{{pascalCase componentName}}.unconnected.test.tsx',
+          },
+        );
       }
 
       return actions;
@@ -83,40 +91,48 @@ module.exports = function(plop) {
       },
     ],
     actions: ({ stateless, connected }) => {
-      const actions = [
-        {
-          type: 'add',
-          path: './src/containers/{{pascalCase containerName}}/__tests__/{{pascalCase containerName}}.test.tsx',
-          templateFile: './config/plop/container/__tests__/container.test.tsx.plop',
-        },
-      ];
+      const actions = [];
 
       if (stateless) {
         actions.push({
           type: 'add',
-          path: './src/containers/{{pascalCase containerName}}/{{pascalCase containerName}}.tsx',
           templateFile: './config/plop/container/container.stateless.tsx.plop',
+          path: './src/containers/{{pascalCase containerName}}/{{pascalCase containerName}}.tsx',
         });
       } else {
         actions.push({
           type: 'add',
-          path: './src/containers/{{pascalCase containerName}}/{{pascalCase containerName}}.tsx',
           templateFile: './config/plop/container/container.tsx.plop',
+          path: './src/containers/{{pascalCase containerName}}/{{pascalCase containerName}}.tsx',
         });
       }
 
       if (connected) {
-        actions.push({
-          type: 'add',
-          path: './src/containers/{{pascalCase containerName}}/index.tsx',
-          templateFile: './config/plop/container/index.connected.tsx.plop',
-        });
+        actions.push(
+          {
+            type: 'add',
+            templateFile: './config/plop/container/index.connected.ts.plop',
+            path: './src/containers/{{pascalCase containerName}}/index.ts',
+          },
+          {
+            type: 'add',
+            templateFile: './config/plop/container/__tests__/container.connected.test.tsx.plop',
+            path: './src/containers/{{pascalCase containerName}}/__tests__/{{pascalCase containerName}}.connected.test.tsx',
+          },
+        );
       } else {
-        actions.push({
-          type: 'add',
-          path: './src/containers/{{pascalCase containerName}}/index.tsx',
-          templateFile: './config/plop/container/index.unconnected.tsx.plop',
-        });
+        actions.push(
+          {
+            type: 'add',
+            templateFile: './config/plop/container/index.unconnected.ts.plop',
+            path: './src/containers/{{pascalCase containerName}}/index.ts',
+          },
+          {
+            type: 'add',
+            templateFile: './config/plop/container/__tests__/container.unconnected.test.tsx.plop',
+            path: './src/containers/{{pascalCase containerName}}/__tests__/{{pascalCase containerName}}.unconnected.test.tsx',
+          },
+        );
       }
 
       return actions;
@@ -136,33 +152,33 @@ module.exports = function(plop) {
       const actions = [
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/actions.ts',
           templateFile: './config/plop/reducer/actions.ts.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/actions.ts',
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/__tests__/actions.test.tsx',
           templateFile: './config/plop/reducer/__tests__/actions.test.tsx.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/__tests__/actions.test.tsx',
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/reducer.ts',
           templateFile: './config/plop/reducer/reducer.ts.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/reducer.ts',
         },
         {
           type: 'add',
+          templateFile: './config/plop/reducer/__tests__/reducer.test.tsx.plop',
           path: './src/reducers/{{pascalCase reducerName}}/__tests__/reducer.test.tsx',
-          templateFile: './config/plop/reducer/r__tests__/educer.test.tsx.plop',
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/types.ts',
           templateFile: './config/plop/reducer/types.ts.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/types.ts',
         },
         {
           type: 'add',
-          path: './src/reducers/{{pascalCase reducerName}}/index.ts',
           templateFile: './config/plop/reducer/index.ts.plop',
+          path: './src/reducers/{{pascalCase reducerName}}/index.ts',
         },
       ];
 

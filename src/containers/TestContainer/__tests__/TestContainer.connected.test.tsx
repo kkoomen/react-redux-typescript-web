@@ -4,8 +4,8 @@ import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import configureStore from 'redux-mock-store';
 
-import { debugState } from '../../../reducers/Debug';
-import { Debug } from '../';
+import { testContainerState } from '../../../reducers/TestContainer';
+import { TestContainer } from '../';
 
 const mockStore = configureStore();
 const initialStoreState = {};
@@ -13,15 +13,15 @@ const initialStoreState = {};
 let store: any;
 beforeEach(() => {
   store = mockStore({
-    debug: debugState,
+    testContainer: testContainerState,
   });
 });
 
-describe('Debug component', () => {
+describe('TestContainer container', () => {
   it('should match its snapshot by default', () => {
     const element = mount(
       <Provider store={store}>
-        <Debug />
+        <TestContainer />
       </Provider>
     );
     expect(toJson(element)).toMatchSnapshot();

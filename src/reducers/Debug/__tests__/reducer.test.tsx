@@ -1,8 +1,10 @@
-import reducer, { initialState } from '../reducer';
+import { debugReducer, initialState } from '../reducer';
 import { DebugActionTypes } from '../types';
 
+import configureStore from 'redux-mock-store';
+
 describe('Debug reducer', () => {
-  let state = reducer(undefined, {});
+  let state = { ...initialState };
 
   beforeEach(() => {
     state = { ...initialState };
@@ -15,7 +17,7 @@ describe('Debug reducer', () => {
   it('should disable logs', () => {
     state.logs.enabled = false;
     expect(
-      reducer(undefined, {
+      debugReducer(undefined, {
         type: DebugActionTypes.DISABLE_ACTION_LOGS,
       })
     ).toEqual(state);
@@ -24,7 +26,7 @@ describe('Debug reducer', () => {
   it('should enable logs', () => {
     state.logs.enabled = true;
     expect(
-      reducer(undefined, {
+      debugReducer(undefined, {
         type: DebugActionTypes.ENABLE_ACTION_LOGS,
       })
     ).toEqual(state);

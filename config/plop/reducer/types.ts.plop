@@ -1,8 +1,6 @@
-import { DeepReadonly } from 'utility-types';
-
-export type {{pascalCase reducerName}}State = DeepReadonly<{
+export interface {{pascalCase reducerName}}State {
   isLoading: boolean,
-}>;
+};
 
 export enum {{pascalCase reducerName}}ActionTypes {
   EXAMPLE = '@@{{camelCase reducerName}}/EXAMPLE',

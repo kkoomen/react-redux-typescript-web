@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TestContainer container should match its snapshot by default 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(TestContainer)>
+    <TestContainer
+      dispatch={[Function]}
+    >
+      <div
+        className="TestContainer"
+      />
+    </TestContainer>
+  </Connect(TestContainer)>
+</Provider>
+`;

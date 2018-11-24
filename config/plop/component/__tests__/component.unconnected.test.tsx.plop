@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 import { {{pascalCase componentName}} } from '../';
 
 describe('{{pascalCase componentName}} component', () => {
-  it('should match its snapshot', () => {
+  it('should match its snapshot by default', () => {
     const element = shallow(<{{pascalCase componentName}} />);
     expect(toJson(element)).toMatchSnapshot();
   });

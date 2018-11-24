@@ -2,9 +2,9 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import {{pascalCase containerName}} from '../';
+import { {{pascalCase containerName}} } from '../';
 
-describe('{{pascalCase containerName}}', () => {
+describe('{{pascalCase containerName}} container', () => {
   it('should match its snapshot', () => {
     const element = shallow(<{{pascalCase containerName}} />);
     expect(toJson(element)).toMatchSnapshot();

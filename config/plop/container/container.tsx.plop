@@ -10,9 +10,9 @@ interface State {};
 {{#if connected}}
 type {{pascalCase containerName}}Props = Props & ConnectedReduxProps;
 
-class {{pascalCase containerName}} extends Component<{{pascalCase containerName}}Props, State> {
+export class {{pascalCase containerName}} extends Component<{{pascalCase containerName}}Props, State> {
 {{else}}
-class {{pascalCase containerName}} extends Component<Props, State> {
+export class {{pascalCase containerName}} extends Component<Props, State> {
 {{/if}}
   public state = {};
 

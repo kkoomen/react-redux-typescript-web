@@ -1,6 +1,5 @@
-import {{camelCase reducerName}}Reducer from './reducer';
 import * as {{camelCase reducerName}}Actions from './actions';
 
 export { {{camelCase reducerName}}Actions };
 export * from './types';
-export default {{camelCase reducerName}}Reducer;
+export { {{camelCase reducerName}}Reducer } from './reducer';

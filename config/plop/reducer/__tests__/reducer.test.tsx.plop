@@ -1,8 +1,8 @@
-import reducer, { initialState } from '../reducer';
+import { {{pascalCase reducerName}}Reducer, initialState } from '../reducer';
 import { DebugActionTypes } from '../types';
 
 describe('{{pascalCase reducerName}} reducer', () => {
-  let state = reducer(undefined, {});
+  let state = {{pascalCase reducerName}}Reducer(undefined, {});
 
   beforeEach(() => {
     state = { ...initialState };
@@ -15,7 +15,7 @@ describe('{{pascalCase reducerName}} reducer', () => {
   it('should change into loading state', () => {
     state.isLoading = true;
     expect(
-      reducer(undefined, {
+      {{pascalCase reducerName}}Reducer(undefined, {
         type: {upperCase (snakeCase reducerName)}}_EXAMPLE,
       })
     ).toEqual(state);

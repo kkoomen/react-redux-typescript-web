@@ -8,13 +8,11 @@ interface Props {};
 {{#if connected}}
 type {{pascalCase containerName}}Props = Props & ConnectedReduxProps;
 
-function {{pascalCase containerName}}(props: {{pascalCase containerName}}Props) {
+export function {{pascalCase containerName}}(props: {{pascalCase containerName}}Props) {
 {{else}}
-function {{pascalCase containerName}}(props: Props) {
+export function {{pascalCase containerName}}(props: Props) {
 {{/if}}
   return (
     <div className="{{pascalCase containerName}}" />
   );
 }
-
-export default {{pascalCase containerName}};

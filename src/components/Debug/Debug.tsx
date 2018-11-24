@@ -12,9 +12,9 @@ import './style.scss';
 
 interface Props {
   fullState: AppState,
-}
+};
 
-interface State {}
+interface State {};
 
 type DebugProps = Props & ConnectedReduxProps;
 

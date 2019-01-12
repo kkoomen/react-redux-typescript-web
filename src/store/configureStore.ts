@@ -6,7 +6,7 @@ import {
   Middleware,
   StoreEnhancer,
 } from 'redux';
-import { connectRouter, routerMiddleware } from 'connected-react-router'
+import { routerMiddleware } from 'connected-react-router'
 import { createLogger } from 'redux-logger';
 import { History } from 'history'
 import thunk from 'redux-thunk';
